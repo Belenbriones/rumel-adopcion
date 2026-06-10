@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumel - Conecta con tu mejor amigo</title>
+    <meta name="description"
+        content="Encuentra a tu compañero ideal en Rumel. Conoce las historias de Oliver, Thor, Mía y muchas más mascotas esperando un hogar definitivo. Proceso de adopción transparente y responsable.">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="logo-link">
+                <img src="Rumel.png" alt="Rumel Logo">
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-item active" id="nav-inicio">Inicio</a>
+                <a href="#proceso" class="nav-item" id="nav-proceso">Proceso</a>
+                <a href="#adopta" class="nav-item" id="nav-adopta">Adopta</a>
+                <a href="#testimonios" class="nav-item" id="nav-testimonios">Testimonios</a>
+                <a href="#donaciones" class="nav-item" id="nav-donaciones">Donaciones</a>
+                <a href="#contacto" class="nav-item" id="nav-contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION (Conoce a Oliver) -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-sparkle"><i class="fa-solid fa-sparkles"></i></div>
+                <h1 class="hero-title-prefix">Conoce a</h1>
+                <div class="hero-title-main">Oliver</div>
+
+                <div>
+                    <span class="hero-badge">
+                        <i class="fa-solid fa-heart"></i> 3 años de edad y muy juguetón
+                    </span>
+                </div>
+
+                <p class="hero-description">
+                    Oliver es un Border Collie que fue abandonado y rescatado hace 3 meses. Es extremadamente
+                    inteligente, juguetón, leal y cariñoso. ¿Te gustaría darle el hogar que se merece?
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#fichas" class="btn btn-primary" id="btn-hero-saber-mas">
+                        <i class="fa-solid fa-paw"></i> Saber más de él
+                    </a>
+                    <a href="#adopta" class="btn btn-secondary" id="btn-hero-conoce-mas">
+                        <i class="fa-solid fa-bone"></i> Conoce más mascotas
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <!-- Background shape (Rectangle 330.png) -->
+                <img src="Rectangle 330.png" alt="Decoración de Fondo" class="hero-bg-shape" id="hero-bg-shape">
+                <!-- Dog image (perrito.del.inicio.png) -->
+                <img src="perrito.del.inicio.png" alt="Oliver el Perrito" class="hero-img" id="hero-img-oliver">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. GALLERY CAROUSEL SECTION ("Conoce a quienes...") -->
+    <section class="gallery-section" id="adopta">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conoce a quienes están esperando una oportunidad</h2>
+                <p class="section-subtitle">
+                    Cada una de estas mascotas espera algo más que un lugar donde vivir. Busca una familia que la haga
+                    sentir segura, querida y parte de ella para siempre.
+                </p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Navigation Arrows -->
+                <button class="carousel-arrow carousel-arrow-prev" id="carousel-prev" aria-label="Anterior mascota">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow carousel-arrow-next" id="carousel-next" aria-label="Siguiente mascota">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carousel-track">
+
+                        <!-- Card 1: Mia -->
+                        <div class="carousel-slide">
+                            <div class="pet-card" id="card-mia">
+                                <div class="pet-img-wrapper">
+                                    <img src="gatito.tomas.png" alt="Gatita Mía" class="pet-card-img">
+                                    <span class="pet-card-tag">Mia</span>
+                                </div>
+                                <div class="pet-card-info">
+                                    <div class="pet-card-meta">
+                                        <span class="pet-badge-age">2 años</span>
+                                        <span class="pet-size-label">Mediana</span>
+                                    </div>
+                                    <h3 class="pet-card-title">Mía</h3>
+                                    <p class="pet-card-desc">"Es una exploradora nata, le encanta curiosear y trepar a
+                                        todos lados, el agua le llama mucho la atención..."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Max -->
+                        <div class="carousel-slide">
+                            <div class="pet-card" id="card-max">
+                                <div class="pet-img-wrapper">
+                                    <img src="dog.max.svg" alt="Perrito Max" class="pet-card-img">
+                                    <span class="pet-card-tag">Max</span>
+                                </div>
+                                <div class="pet-card-info">
+                                    <div class="pet-card-meta">
+                                        <span class="pet-badge-age">~2 años</span>
+                                        <span class="pet-size-label">Mediano</span>
+                                    </div>
+                                    <h3 class="pet-card-title">Protagonista del día</h3>
+                                    <p class="pet-card-desc">"Es un cachorrón con mucha energía, leal por naturaleza,
+                                        cariñoso y siempre dispuesto a sacarte una sonrisa."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Tomas -->
+                        <div class="carousel-slide">
+                            <div class="pet-card" id="card-tomas">
+                                <div class="pet-img-wrapper">
+                                    <img src="gatito.tomas.svg" alt="Gatito Tomás" class="pet-card-img">
+                                    <span class="pet-card-tag">Tomas</span>
+                                </div>
+                                <div class="pet-card-info">
+                                    <div class="pet-card-meta">
+                                        <span class="pet-badge-age">5 meses</span>
+                                        <span class="pet-size-label">Pequeña</span>
+                                    </div>
+                                    <h3 class="pet-card-title">Tomás</h3>
+                                    <p class="pet-card-desc">"Independiente pero muy cariñoso por las noches. Adora
+                                        perseguir juguetes de hilo y dormir a los pies de la cama."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Luna -->
+                        <div class="carousel-slide">
+                            <div class="pet-card" id="card-luna">
+                                <div class="pet-img-wrapper">
+                                    <img src="perritoluna.png" alt="Perrita Luna" class="pet-card-img">
+                                    <span class="pet-card-tag">Luna</span>
+                                </div>
+                                <div class="pet-card-info">
+                                    <div class="pet-card-meta">
+                                        <span class="pet-badge-age">2 años</span>
+                                        <span class="pet-size-label">Grande</span>
+                                    </div>
+                                    <h3 class="pet-card-title">Luna</h3>
+                                    <p class="pet-card-desc">"El guardián más gentil que podrías conocer. Sumamente
+                                        protectora, tranquila y excelente con niños de todas las edades."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-view-all">
+                <a href="#fichas" class="view-all-link" id="link-ver-todos">
+                    Ver todos <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INTERACTIVE PROFILE FICHAS SECTION (Oliver, Thor, Mía) -->
+    <section class="fichas-section" id="fichas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conoce en detalle a nuestros amigos</h2>
+                <p class="section-subtitle">
+                    Explora sus perfiles técnicos, temperamento, gustos y mañas. Haz clic sobre la ficha para cambiar al
+                    siguiente animal o usa las pestañas.
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="fichas-tabs">
+                <button class="tab-btn active" data-target="ficha-oliver" id="tab-oliver">Oliver</button>
+                <button class="tab-btn" data-target="ficha-thor" id="tab-thor">Thor</button>
+                <button class="tab-btn" data-target="ficha-mia" id="tab-mia">Mía</button>
+            </div>
+
+            <!-- Profile Cards Container -->
+            <div class="profile-card-outer">
+
+                <!-- FICHA OLIVER -->
+                <div class="profile-card-container active" id="ficha-oliver" data-index="0">
+                    <i class="fa-solid fa-paw decor-paw decor-paw-left"></i>
+                    <i class="fa-solid fa-heart decor-paw decor-paw-right"></i>
+
+                    <!-- Gallery -->
+                    <div class="profile-gallery">
+                        <div class="main-image-wrapper">
+                            <img src="perrito.inicio2.png" alt="Oliver principal" class="main-profile-img"
+                                id="main-img-oliver">
+                        </div>
+                        <div class="thumb-gallery">
+                            <div class="thumb-img-wrapper active"
+                                onclick="changeMainImg('oliver', 'perrito.inicio2.png', this, event)">
+                                <img src="perrito.inicio2.png" alt="Oliver 1">
+                            </div>
+                            <div class="thumb-img-wrapper"
+                                onclick="changeMainImg('oliver', 'perrito,inicio.png', this, event)">
+                                <img src="perrito,inicio.png" alt="Oliver 2">
+                            </div>
+                            <div class="thumb-img-wrapper"
+                                onclick="changeMainImg('oliver', 'perrito2.png', this, event)">
+                                <img src="perrito2.png" alt="Oliver 3">
+                            </div>
+                            <div class="thumb-img-wrapper thumb-more-badge">
+                                <span>+5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Details -->
+                    <div class="profile-details">
+                        <div class="profile-header">
+                            <h3 class="profile-name">Oliver</h3>
+                            <span class="status-badge"><i class="fa-solid fa-check-circle"></i> Disponible</span>
+                        </div>
+
+                        <p class="profile-subtitle">Juguetón - Reservado</p>
+
+                        <div class="profile-desc-box">
+                            Con su mirada dulce y su espíritu juguetón, Oliver solo sueña con encontrar ese hogar
+                            definitivo donde pueda demostrar lo buen amigo que es y compartir sus aventuras.
+                        </div>
+
+                        <!-- Specs Grid -->
+                        <div class="profile-specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Edad</span>
+                                <span class="spec-val">~3 años</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Tamaño</span>
+                                <span class="spec-val">Mediano</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso</span>
+                                <span class="spec-val">21 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Raza</span>
+                                <span class="spec-val">Border Collie</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Salud</span>
+                                <span class="spec-val">Al día</span>
+                            </div>
+                        </div>
+
+                        <!-- Character Progress Bars -->
+                        <div class="profile-character">
+                            <span class="character-title">Carácter</span>
+                            <div class="character-grid">
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Cariño</span>
+                                        <span>78%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 78%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Energía</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Sociable</span>
+                                        <span>65%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 65%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Independencia</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Likes -->
+                        <div class="profile-hobbies">
+                            <span class="hobbies-title">Le gusta hacer</span>
+                            <div class="hobbies-list">
+                                <span class="hobby-tag">Juguetón</span>
+                                <span class="hobby-tag">Leal</span>
+                                <span class="hobby-tag">Le gusta el parque</span>
+                            </div>
+                        </div>
+
+                        <!-- Maña -->
+                        <div class="mana-box">
+                            <span class="mana-badge">SU MAÑA</span>
+                            <span>Te trae sus juguetes aunque no se los pidas. Todos. A la vez.</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="profile-actions">
+                            <button class="btn btn-action btn-adopt-pet" data-pet="Oliver">
+                                Quiero conocerlo en persona <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="btn-icon-only btn-like-pet" aria-label="Favorito">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FICHA THOR -->
+                <div class="profile-card-container" id="ficha-thor" data-index="1">
+                    <i class="fa-solid fa-paw decor-paw decor-paw-left"></i>
+                    <i class="fa-solid fa-shield-halved decor-paw decor-paw-right"></i>
+
+                    <!-- Gallery -->
+                    <div class="profile-gallery">
+                        <div class="main-image-wrapper">
+                            <img src="perrito.callejero.png" alt="Thor principal" class="main-profile-img"
+                                id="main-img-thor">
+                        </div>
+                        <div class="thumb-gallery">
+                            <div class="thumb-img-wrapper active"
+                                onclick="changeMainImg('thor', 'perrito.callejero.png', this, event)">
+                                <img src="perrito.callejero.png" alt="Thor 1">
+                            </div>
+                            <div class="thumb-img-wrapper"
+                                onclick="changeMainImg('thor', 'perrito.callejero2.png', this, event)">
+                                <img src="perrito.callejero2.png" alt="Thor 2">
+                            </div>
+                            <div class="thumb-img-wrapper"
+                                onclick="changeMainImg('thor', 'perrito.callejero3.png', this, event)">
+                                <img src="perrito.callejero3.png" alt="Thor 3">
+                            </div>
+                            <div class="thumb-img-wrapper"
+                                onclick="changeMainImg('thor', 'perrito.callejero4.png', this, event)">
+                                <img src="perrito.callejero4.png" alt="Thor 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Details -->
+                    <div class="profile-details">
+                        <div class="profile-header">
+                            <h3 class="profile-name">Thor</h3>
+                            <span class="status-badge"><i class="fa-solid fa-check-circle"></i> Disponible</span>
+                        </div>
+
+                        <p class="profile-subtitle">Enérgico - Protector</p>
+
+                        <div class="profile-desc-box">
+                            Thor es un perro valiente, de gran corazón y sumamente leal que fue rescatado de una
+                            situación de calle. Necesita una familia activa con quien gastar su energía y correr feliz.
+                        </div>
+
+                        <!-- Specs Grid -->
+                        <div class="profile-specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Edad</span>
+                                <span class="spec-val">2 años</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Tamaño</span>
+                                <span class="spec-val">Grande</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso</span>
+                                <span class="spec-val">28 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Raza</span>
+                                <span class="spec-val">Mestizo</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Salud</span>
+                                <span class="spec-val">Al día</span>
+                            </div>
+                        </div>
+
+                        <!-- Character Progress Bars -->
+                        <div class="profile-character">
+                            <span class="character-title">Carácter</span>
+                            <div class="character-grid">
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Cariño</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Energía</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Sociable</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Independencia</span>
+                                        <span>50%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Likes -->
+                        <div class="profile-hobbies">
+                            <span class="hobbies-title">Le gusta hacer</span>
+                            <div class="hobbies-list">
+                                <span class="hobby-tag">Correr libre</span>
+                                <span class="hobby-tag">Jugar con pelotas</span>
+                                <span class="hobby-tag">Caminatas largas</span>
+                            </div>
+                        </div>
+
+                        <!-- Maña -->
+                        <div class="mana-box">
+                            <span class="mana-badge">SU MAÑA</span>
+                            <span>Esconde sus juguetes bajo el sillón y llora bajito hasta que se los saques.</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="profile-actions">
+                            <button class="btn btn-action btn-adopt-pet" data-pet="Thor">
+                                Quiero conocerlo en persona <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="btn-icon-only btn-like-pet" aria-label="Favorito">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FICHA MIA -->
+                <div class="profile-card-container" id="ficha-mia" data-index="2">
+                    <i class="fa-solid fa-paw decor-paw decor-paw-left"></i>
+                    <i class="fa-solid fa-feather-pointed decor-paw decor-paw-right"></i>
+
+                    <!-- Gallery -->
+                    <div class="profile-gallery">
+                        <div class="main-image-wrapper">
+                            <img src="gatito3.png" alt="Mía principal" class="main-profile-img" id="main-img-mia">
+                        </div>
+                        <div class="thumb-gallery">
+                            <div class="thumb-img-wrapper active"
+                                onclick="changeMainImg('mia', 'gatito3.png', this, event)">
+                                <img src="gatito3.png" alt="Mía 1">
+                            </div>
+                            <div class="thumb-img-wrapper" onclick="changeMainImg('mia', 'gatito2.png', this, event)">
+                                <img src="gatito2.png" alt="Mía 2">
+                            </div>
+                            <div class="thumb-img-wrapper" onclick="changeMainImg('mia', 'gatito1.png', this, event)">
+                                <img src="gatito1.png" alt="Mía 3">
+                            </div>
+                            <div class="thumb-img-wrapper thumb-more-badge">
+                                <span>+2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Details -->
+                    <div class="profile-details">
+                        <div class="profile-header">
+                            <h3 class="profile-name">Mía</h3>
+                            <span class="status-badge"><i class="fa-solid fa-check-circle"></i> Disponible</span>
+                        </div>
+
+                        <p class="profile-subtitle">Curiosa - Independiente</p>
+
+                        <div class="profile-desc-box">
+                            Mía es una gatita adorable, ronroneadora por excelencia y muy observadora. Le encanta trepar
+                            a las estanterías altas y es perfecta para personas que buscan una compañera tranquila.
+                        </div>
+
+                        <!-- Specs Grid -->
+                        <div class="profile-specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Edad</span>
+                                <span class="spec-val">1 año</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Tamaño</span>
+                                <span class="spec-val">Pequeña</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Peso</span>
+                                <span class="spec-val">3.5 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Raza</span>
+                                <span class="spec-val">Común Europeo</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Salud</span>
+                                <span class="spec-val">Esquema al día</span>
+                            </div>
+                        </div>
+
+                        <!-- Character Progress Bars -->
+                        <div class="profile-character">
+                            <span class="character-title">Carácter</span>
+                            <div class="character-grid">
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Cariño</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Energía</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Sociable</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                                <div class="char-bar-item">
+                                    <div class="char-label-row">
+                                        <span>Independencia</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="char-bar-outer">
+                                        <div class="char-bar-inner" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Likes -->
+                        <div class="profile-hobbies">
+                            <span class="hobbies-title">Le gusta hacer</span>
+                            <div class="hobbies-list">
+                                <span class="hobby-tag">Dormir al sol</span>
+                                <span class="hobby-tag">Juguetes de plumas</span>
+                                <span class="hobby-tag">Ronronear fuerte</span>
+                            </div>
+                        </div>
+
+                        <!-- Maña -->
+                        <div class="mana-box">
+                            <span class="mana-badge">SU MAÑA</span>
+                            <span>Si no le haces caso, tira tus lápices del escritorio con su patita. uno por
+                                uno.</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="profile-actions">
+                            <button class="btn btn-action btn-adopt-pet" data-pet="Mía">
+                                Quiero conocerla en persona <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="btn-icon-only btn-like-pet" aria-label="Favorito">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Instruction overlay to click card to swap -->
+            <div class="click-instruction" id="click-instruction">
+                <i class="fa-solid fa-hand-pointer"></i> Haz clic en la ficha para ver el siguiente animal
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ADOPTION PROCESS SECTION (Vertical Timeline lit1-5) -->
+    <section class="process-section" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Así te acompañamos durante el proceso de adopción</h1>
+                <p class="section-subtitle">
+                    Queremos que tanto las mascotas como las familias encuentren el mejor match posible. Por eso
+                    diseñamos un proceso claro, transparente y responsable que te acompañará en cada etapa.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-img-side">
+                        <div class="timeline-img-card">
+                            <div class="node-number node-top-left">1</div>
+                            <img src="lit1.png" alt="Explora mascotas compatibles">
+                            <img src="Vector 240.svg" alt="Flechita decorativa" class="step-arrow arrow-1">
+                        </div>
+                    </div>
+                    <div class="timeline-content-side">
+                        <h2 class="timeline-step-title">Explora y conoce mascotas compatibles</h2>
+                        <p class="timeline-step-desc">
+                            Descubre mascotas con distintas personalidades, necesidades y estilos de vida. Revisa sus
+                            historias y encuentra aquellas que podrían ser compatibles contigo y tu familia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-img-side">
+                        <div class="timeline-img-card">
+                            <div class="node-number node-top-right">2</div>
+                            <img src="lit2.png" alt="Cuéntanos sobre ti">
+                            <img src="Vector 239.svg" alt="Flechita decorativa" class="step-arrow arrow-2">
+                        </div>
+                    </div>
+                    <div class="timeline-content-side">
+                        <h2 class="timeline-step-title">Cuéntanos sobre ti</h2>
+                        <p class="timeline-step-desc">
+                            Completa nuestro perfil de postulante para ayudarnos a comprender tu entorno, expectativas y
+                            experiencia con mascotas. Esto nos permite avanzar de forma responsable y transparente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-img-side">
+                        <div class="timeline-img-card">
+                            <div class="node-number node-top-left">3</div>
+                            <img src="lit3.png" alt="Conexión con fundación">
+                            <img src="Vector 83.svg" alt="Flechita decorativa" class="step-arrow arrow-3">
+                        </div>
+                    </div>
+                    <div class="timeline-content-side">
+                        <h2 class="timeline-step-title">Conectamos contigo y la fundación</h2>
+                        <p class="timeline-step-desc">
+                            La fundación revisará tu información y podrá contactarte para resolver dudas, profundizar
+                            algunos aspectos o coordinar los siguientes pasos del proceso.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-img-side">
+                        <div class="timeline-img-card">
+                            <div class="node-number node-top-right">4</div>
+                            <img src="lit4.png" alt="Conoce a tu mascota">
+                            <img src="Vector 206.svg" alt="Flechita decorativa" class="step-arrow arrow-4">
+                        </div>
+                    </div>
+                    <div class="timeline-content-side">
+                        <h2 class="timeline-step-title">Conoce a tu futura mascota</h2>
+                        <p class="timeline-step-desc">
+                            Si existe compatibilidad, podrás coordinar un encuentro para conocer a la mascota, resolver
+                            dudas y confirmar que ambos son un buen match.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-img-side">
+                        <div class="timeline-img-card">
+                            <div class="node-number node-top-left">5</div>
+                            <img src="lit5.png" alt="Comienza una nueva historia">
+                        </div>
+                    </div>
+                    <div class="timeline-content-side">
+                        <h2 class="timeline-step-title">Comienza una nueva historia</h2>
+                        <p class="timeline-step-desc">
+                            Una vez finalizado el proceso, la mascota podrá integrarse a su nuevo hogar para comenzar
+                            una vida llena de cuidados, compañía y cariño.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DONORS BANNER SECTION ("Sé parte de nuestros donadores") -->
+    <section class="donors-banner-section" id="donaciones">
+        <div class="donors-banner-container">
+            <img src="gatito.patita.png" alt="Gatito Patita" class="donors-banner-kitten">
+            <div class="donors-banner-content">
+                <h2 class="donors-banner-title">Sé parte de nuestros donadores</h2>
+                <div class="donors-banner-buttons">
+                    <a href="#contacto" class="btn btn-primary btn-adopt-donor"
+                        onclick="setContactField('adopcion', 'Hola, deseo adoptar a una de las mascotas disponibles.')">
+                        <i class="fa-solid fa-paw"></i> Quiero Adoptar
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary btn-donate-donor"
+                        onclick="setContactField('donacion', 'Hola, deseo realizar una donación para apoyar a la fundación.')">
+                        <i class="fa-solid fa-heart"></i> Donar Ahora
+                    </a>
+                </div>
+                <p class="donors-banner-subtext">Tú eliges cómo quieres ayudar hoy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PILLARS SECTION ("Construimos adopciones...") -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-green" style="color: var(--primary-color);">Construimos adopciones que
+                    perduran en el tiempo</h2>
+                <p class="section-subtitle">
+                    Creemos que una buena adopción no se trata de rapidez, sino de compatibilidad, compromiso y
+                    bienestar. Por eso conectamos personas, fundaciones, veterinarios y mascotas en un proceso pensado
+                    para construir vínculos responsables y duraderos.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Column 1: Responsabilidad -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-wrapper">
+                        <img src="image 89.png" alt="Responsabilidad">
+                    </div>
+                    <h3 class="pillar-card-title">Responsabilidad</h3>
+                    <p class="pillar-card-desc">
+                        Promovemos decisiones conscientes que prioricen el bienestar de las mascotas durante toda su
+                        vida.
+                    </p>
+                </div>
+
+                <!-- Column 2: Transparencia -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-wrapper">
+                        <img src="image 90.png" alt="Transparencia">
+                    </div>
+                    <h3 class="pillar-card-title">Transparencia</h3>
+                    <p class="pillar-card-desc">
+                        Explicamos cada etapa del proceso para generar confianza tanto en adoptantes como en
+                        fundaciones.
+                    </p>
+                </div>
+
+                <!-- Column 3: Compromiso -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-wrapper">
+                        <img src="image 88.png" alt="Compromiso">
+                    </div>
+                    <h3 class="pillar-card-title">Compromiso</h3>
+                    <p class="pillar-card-desc">
+                        Creemos que una adopción exitosa es aquella que construye un vínculo permanente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SUCCESS GALLERY SECTION (Adopción 1-4) -->
+    <section class="success-section" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Finales felices y nuevas vidas</h2>
+                <p class="section-subtitle">
+                    Gracias al amor de personas comprometidas, estas mascotas hoy disfrutan de un hogar cálido. Te
+                    compartimos algunas de nuestras adopciones más recientes.
+                </p>
+            </div>
+
+            <div class="success-grid">
+
+                <!-- Adopción 1 -->
+                <div class="success-card">
+                    <div class="success-img-wrapper">
+                        <img src="Adopción 1.png" alt="Adopción Exitosa 1">
+                    </div>
+                    <div class="success-card-caption">
+                        <h4 class="success-card-title">Max y su Familia</h4>
+                        <span class="success-card-tag">Adoptado hace 2 meses</span>
+                    </div>
+                </div>
+
+                <!-- Adopción 2 -->
+                <div class="success-card">
+                    <div class="success-img-wrapper">
+                        <img src="Adopción 2.png" alt="Adopción Exitosa 2">
+                    </div>
+                    <div class="success-card-caption">
+                        <h4 class="success-card-title">Luna en su Hogar</h4>
+                        <span class="success-card-tag">Adoptada hace 6 meses</span>
+                    </div>
+                </div>
+
+                <!-- Adopción 3 -->
+                <div class="success-card">
+                    <div class="success-img-wrapper">
+                        <img src="Adopción 3.png" alt="Adopción Exitosa 3">
+                    </div>
+                    <div class="success-card-caption">
+                        <h4 class="success-card-title">Mila y Tomás</h4>
+                        <span class="success-card-tag">Adoptados juntos</span>
+                    </div>
+                </div>
+
+                <!-- Adopción 4 -->
+                <div class="success-card">
+                    <div class="success-img-wrapper">
+                        <img src="Adopción 4.png" alt="Adopción Exitosa 4">
+                    </div>
+                    <div class="success-card-caption">
+                        <h4 class="success-card-title">El Regreso de Mateo</h4>
+                        <span class="success-card-tag">Adoptado hace 1 año</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT & INTEREST REGISTER FORM SECTION -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="contact-card">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <h2 class="section-title" style="font-size: 30px;">¿Estás listo para cambiar una vida?</h2>
+                    <p class="section-subtitle">
+                        Si quieres iniciar un proceso de adopción, resolver dudas sobre una mascota o saber cómo puedes
+                        ayudar, escríbenos.
+                    </p>
+                </div>
+
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="contact-form-grid">
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Nombre Completo *</label>
+                            <input type="text" id="form-name" class="form-input" placeholder="Ej. Ana Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Correo Electrónico *</label>
+                            <input type="email" id="form-email" class="form-input" placeholder="Ej. ana.perez@email.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-phone" class="form-label">Teléfono / WhatsApp</label>
+                            <input type="tel" id="form-phone" class="form-input" placeholder="Ej. +56 9 1234 5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-interest" class="form-label">Motivo de Contacto *</label>
+                            <select id="form-interest" class="form-input" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="adopcion">Quiero Adoptar</option>
+                                <option value="donacion">Quiero hacer una donación especial</option>
+                                <option value="voluntario">Ser Voluntario</option>
+                                <option value="consulta">Consulta General</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group contact-form-full">
+                            <label for="form-message" class="form-label">Mensaje *</label>
+                            <textarea id="form-message" class="form-input"
+                                placeholder="Cuéntanos un poco sobre ti, tu casa, y por qué te interesa contactarnos..."
+                                required></textarea>
+                        </div>
+
+                        <div class="contact-form-full">
+                            <button type="submit" class="btn btn-action contact-submit-btn" id="btn-submit-form">
+                                Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+
+                <div class="footer-brand">
+                    <img src="logo.blanco1.svg" alt="Rumel Logo Blanco" class="footer-logo">
+                    <p class="footer-desc">
+                    </p>
+                    <div class="footer-socials"
+                        style="margin-top: 15px; display: flex; gap: 12px; justify-content: flex-start;">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Adoptar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#adopta">Mascotas disponibles</a></li>
+                        <li><a href="#proceso">Cómo funciona</a></li>
+                        <li><a href="#contacto">Requisitos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Comunidad</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Fundación</a></li>
+                        <li><a href="#donaciones">Donar</a></li>
+                        <li><a href="#contacto">Ser voluntario</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ado.pet@gmail.cl">ado.pet@gmail.cl</a></li>
+                        <li><a href="tel:+569570854">+569570854</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom"
+                style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p class="copyright" style="text-align: left;">
+                    © 2026 Adopet. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DE INTERACTIVIDAD -->
+    <script>
+        // 1. SCROLL NAVBAR EFFECT & ACTIVE STATES
+        const header = document.getElementById('header');
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Track active section to highlight navbar
+            let currentSectionId = '';
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop - 120;
+                const secHeight = sec.offsetHeight;
+                if (window.scrollY >= secTop && window.scrollY < secTop + secHeight) {
+                    currentSectionId = sec.getAttribute('id');
+                }
+            });
+
+            if (currentSectionId) {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href').includes(currentSectionId)) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // 2. MOBILE MENU TOGGLE
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // 3. CAROUSEL SLIDER (Sección 2)
+        const track = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+
+        let currentIndex = 0;
+
+        function getSlidesPerView() {
+            if (window.innerWidth <= 768) return 1;
+            if (window.innerWidth <= 1024) return 2;
+            return 3;
+        }
+
+        function updateCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const slidesPerView = getSlidesPerView();
+            const maxIndex = slides.length - slidesPerView;
+
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const maxIndex = slides.length - getSlidesPerView();
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back
+            }
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                const slides = document.querySelectorAll('.carousel-slide');
+                currentIndex = slides.length - getSlidesPerView(); // Loop to end
+            }
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+        // Initial run
+        setTimeout(updateCarousel, 300);
+
+        // 4. INTERACTIVE PROFILE FICHAS SWITCHER (Sección 3)
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const profileContainers = document.querySelectorAll('.profile-card-container');
+        const clickInstruction = document.getElementById('click-instruction');
+
+        // Tab switcher
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const targetId = btn.getAttribute('data-target');
+
+                tabBtns.forEach(b => b.classList.remove('active'));
+                profileContainers.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Thumbnail switching function
+        function changeMainImg(petName, imgSrc, thumbElement, e) {
+            // Prevent the card-click handler from triggering when clicking a thumbnail
+            const ev = e || window.event;
+            if (ev) {
+                ev.stopPropagation();
+            }
+
+            const mainImg = document.getElementById(`main-img-${petName}`);
+            mainImg.style.opacity = '0';
+
+            setTimeout(() => {
+                mainImg.src = imgSrc;
+                mainImg.style.opacity = '1';
+            }, 200);
+
+            // Manage active thumbnail style
+            const siblings = thumbElement.parentNode.querySelectorAll('.thumb-img-wrapper');
+            siblings.forEach(sib => sib.classList.remove('active'));
+            thumbElement.classList.add('active');
+        }
+
+        // Switch pet when clicking on the profile card ("al cliquear encima aparece el otro animal")
+        profileContainers.forEach(container => {
+            container.addEventListener('click', (e) => {
+                // Prevent trigger if clicked on an action button, a link, a thumbnail or the like button
+                if (
+                    e.target.closest('.btn-adopt-pet') ||
+                    e.target.closest('.btn-like-pet') ||
+                    e.target.closest('.thumb-img-wrapper') ||
+                    e.target.closest('a')
+                ) {
+                    return;
+                }
+
+                // Cycle pets
+                const nextIndex = (parseInt(container.getAttribute('data-index')) + 1) % profileContainers.length;
+                const nextContainer = profileContainers[nextIndex];
+                const nextTargetId = nextContainer.getAttribute('id');
+
+                profileContainers.forEach(c => c.classList.remove('active'));
+                tabBtns.forEach(b => b.classList.remove('active'));
+
+                nextContainer.classList.add('active');
+                document.querySelector(`[data-target="${nextTargetId}"]`).classList.add('active');
+            });
+        });
+
+        // Also support clicking the instruction prompt
+        clickInstruction.addEventListener('click', () => {
+            const activeContainer = document.querySelector('.profile-card-container.active');
+            const nextIndex = (parseInt(activeContainer.getAttribute('data-index')) + 1) % profileContainers.length;
+            const nextContainer = profileContainers[nextIndex];
+            const nextTargetId = nextContainer.getAttribute('id');
+
+            profileContainers.forEach(c => c.classList.remove('active'));
+            tabBtns.forEach(b => b.classList.remove('active'));
+
+            nextContainer.classList.add('active');
+            document.querySelector(`[data-target="${nextTargetId}"]`).classList.add('active');
+        });
+
+        // Like buttons logic
+        const likeButtons = document.querySelectorAll('.btn-like-pet');
+        likeButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const icon = btn.querySelector('i');
+                icon.classList.toggle('fa-solid');
+                icon.classList.toggle('fa-regular');
+
+                if (icon.classList.contains('fa-solid')) {
+                    btn.style.color = '#e53e3e';
+                    showToast('¡Añadido a favoritos!');
+                } else {
+                    btn.style.color = 'var(--secondary-color)';
+                    showToast('Eliminado de favoritos');
+                }
+            });
+        });
+
+        // Adopt buttons logic
+        const adoptBtns = document.querySelectorAll('.btn-adopt-pet');
+        adoptBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const pet = btn.getAttribute('data-pet');
+                document.getElementById('form-interest').value = 'adopcion';
+                document.getElementById('form-message').value = `Hola, estoy interesado en adoptar a ${pet}. Quisiera agendar una cita para conocerlo.`;
+                document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+                showToast(`Formulario rellenado para conocer a ${pet}`);
+            });
+        });
+
+        // Donors buttons logic
+        const donorBtns = document.querySelectorAll('.btn-donor');
+        donorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.getAttribute('data-type');
+                document.getElementById('form-interest').value = 'donacion';
+                document.getElementById('form-message').value = `Hola, me pongo en contacto porque deseo colaborar a través de una donación de tipo: ${type}.`;
+                document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+                showToast(`Interés en donación registrado`);
+            });
+        });
+
+        // 5. CONTACT FORM HANDLER
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+
+            showToast(`¡Gracias, ${name}! Recibimos tu consulta. Te contactaremos pronto a ${email}.`, 5000);
+            document.getElementById('contact-form').reset();
+        }
+
+        // Helper function for donors banner buttons
+        function setContactField(interestVal, messageText) {
+            document.getElementById('form-interest').value = interestVal;
+            document.getElementById('form-message').value = messageText;
+            showToast(`Formulario configurado para: ${interestVal === 'adopcion' ? 'Adopción' : 'Donación'}`);
+        }
+
+        // Toast Notification utility
+        function showToast(message, duration = 3000) {
+            // Remove existing toast if any
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) {
+                existingToast.remove();
+            }
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.innerHTML = `<i class="fa-solid fa-info-circle"></i> ${message}`;
+
+            // Styling toast dynamically
+            Object.assign(toast.style, {
+                position: 'fixed',
+                bottom: '30px',
+                right: '30px',
+                backgroundColor: '#2d3748',
+                color: '#ffffff',
+                padding: '14px 24px',
+                borderRadius: '12px',
+                boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+                zIndex: '9999',
+                fontSize: '14px',
+                fontFamily: 'var(--font-body)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                opacity: '0',
+                transform: 'translateY(20px)',
+                transition: 'all 0.3s ease'
+            });
+
+            document.body.appendChild(toast);
+
+            // Animate in
+            setTimeout(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateY(0)';
+            }, 50);
+
+            // Animate out
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                setTimeout(() => toast.remove(), 300);
+            }, duration);
+        }
+    </script>
+</body>
+
+</html>
