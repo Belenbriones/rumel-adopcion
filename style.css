@@ -246,12 +246,44 @@ button, input, textarea, select {
 /* SECTION 1: HERO (Conoce a Oliver) */
 .hero-section {
   padding-top: 140px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   position: relative;
+  background-image: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0) 70%), url('Group 146 (1).svg');
+  background-size: 100% 100%, auto 108%; /* Scaled to 108% height to make the illustration larger */
+  background-position: left top, right bottom; /* Align grass with the bottom of the section, and move illustration to the right */
+  background-repeat: no-repeat, no-repeat;
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden; /* Prevent horizontal overflow from absolute decorations */
+}
+
+/* Floating decorations inside the park background area */
+.hero-bg-heart {
+  position: absolute;
+  right: 6%; /* Moved further to the right to avoid overlapping the dog */
+  top: 24%;
+  width: 80px;
+  height: auto;
+  transform: rotate(-15deg);
+  opacity: 0.85;
+  z-index: 3; /* Above the image */
+  pointer-events: none;
+  animation: float 4s infinite ease-in-out;
+}
+
+.hero-bg-paw {
+  position: absolute;
+  right: 20px;
+  top: 48%; /* Restored default vertical alignment next to the dog */
+  width: 100px;
+  height: auto;
+  transform: rotate(15deg);
+  opacity: 0.85;
+  z-index: 3; /* Above the image */
+  pointer-events: none;
+  animation: float 3.5s infinite ease-in-out;
 }
 
 .hero-grid {
@@ -259,6 +291,8 @@ button, input, textarea, select {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
+  z-index: 2; /* Keep grid text above absolute background image */
+  width: 100%;
 }
 
 .hero-content {
@@ -266,14 +300,21 @@ button, input, textarea, select {
   z-index: 2;
 }
 
+@media (min-width: 1025px) {
+  .hero-content {
+    margin-top: -65px; /* Shift text and buttons a bit higher on desktop */
+  }
+}
+
 .hero-sparkle {
   position: absolute;
-  top: -30px;
-  left: -20px;
-  color: var(--primary-color);
-  font-size: 24px;
-  opacity: 0.8;
-  animation: pulse 2s infinite;
+  top: -45px;
+  left: -25px;
+  z-index: 5;
+}
+
+.hero-decor-sparkle {
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .hero-title-prefix {
@@ -294,14 +335,28 @@ button, input, textarea, select {
   display: inline-block;
 }
 
-.hero-title-main::after {
-  content: '💚';
+/* Custom hand-drawn heart next to "Oliver" */
+.hero-heart-wrapper {
   position: absolute;
-  right: -50px;
-  top: 10px;
-  font-size: 32px;
-  opacity: 0.9;
+  right: -80px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+}
+
+.hero-heart-decor {
+  width: 100%;
+  height: auto;
+  transform: rotate(15deg);
   animation: float 3s infinite ease-in-out;
+}
+
+.hero-heart-sparkles {
+  position: absolute;
+  right: -15px;
+  top: -5px;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .hero-badge {
@@ -332,33 +387,36 @@ button, input, textarea, select {
   flex-wrap: wrap;
 }
 
-.hero-image-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Mobile-only image container (hidden on desktop) */
+.hero-image-mobile-only {
+  display: none;
 }
 
-.hero-bg-shape {
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  z-index: 1;
-  opacity: 0.85;
-  pointer-events: none;
-  animation: rotateSlow 25s infinite linear;
-}
-
-.hero-img {
-  position: relative;
-  z-index: 2;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  border: 8px solid #ffffff;
-  box-shadow: var(--shadow-xl);
-  max-width: 100%;
-  height: 480px;
-  object-fit: cover;
-  animation: morphing 15s infinite ease-in-out;
+@media (max-width: 1024px) {
+  .hero-section {
+    background-image: none !important;
+    background-color: #ffffff;
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .hero-image-mobile-only {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-image-mobile-only img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero-bg-heart, .hero-bg-paw {
+    display: none;
+  }
 }
 
 /* SECTION 2: GALLERY/CAROUSEL ("Conoce a quienes...") */
@@ -963,7 +1021,7 @@ button, input, textarea, select {
   box-shadow: var(--shadow-xl);
 }
 
-.timeline-img-card img {
+.timeline-img-card .timeline-main-img {
   border-radius: var(--radius-sm);
   width: 100%;
   height: 200px;
@@ -1046,6 +1104,7 @@ button, input, textarea, select {
   position: absolute;
   z-index: 10;
   pointer-events: none;
+  object-fit: contain;
 }
 
 .arrow-1 {
@@ -1111,7 +1170,7 @@ button, input, textarea, select {
   width: 100%;
   height: 100%;
   background: url('pastito.png') no-repeat center center / cover;
-  border-radius: 100px 0 0 100px; /* Redondeado cápsula en la izquierda */
+  border-radius: 100px 0 0 100px; /* Restore rounded capsule on the left */
   z-index: 1;
   box-shadow: var(--shadow-lg);
 }
@@ -1126,19 +1185,37 @@ button, input, textarea, select {
 
 .donors-banner-kitten {
   position: absolute;
-  left: 20px;
-  bottom: -15px;
-  height: 310px; /* Gatito grande y proporcional */
+  left: -45px;
+  bottom: -30px;
+  height: 430px; /* Increased to 430px to cover the grass corner completely */
   width: auto;
   z-index: 20;
   pointer-events: none;
+}
+
+/* Sparkles decorativos del gatito (hidden on mobile, positioned relative to container on desktop) */
+.donors-banner-sparkles {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .donors-banner-sparkles {
+    display: block;
+    position: absolute;
+    left: 175px; /* Positioned slightly to the right of the ear */
+    bottom: 385px; /* Higher above the kitten's ear */
+    width: 45px;
+    height: 45px;
+    z-index: 25;
+    pointer-events: none;
+  }
 }
 
 .donors-banner-content {
   text-align: center;
   color: #ffffff;
   z-index: 10;
-  padding-left: 260px; /* Margen para no tapar el gatito */
+  padding-left: 80px; /* Reduced from 260px to center it more */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1241,67 +1318,239 @@ button, input, textarea, select {
   max-width: 260px;
 }
 
-/* SECTION 6: SUCCESS GALLERY (Adopción 1-4) */
+/* SECTION 6: SUCCESS GALLERY (Stories List) */
 .success-section {
   padding: 100px 0;
   background-color: var(--bg-soft);
   position: relative;
 }
 
-.success-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 40px;
+.stories-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(63, 172, 144, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.success-card {
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.story-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  gap: 60px; /* clean gap, no overlapping */
+}
+
+.story-img-card {
+  width: 290px;
+  height: 360px;
+  flex-shrink: 0;
   background-color: #ffffff;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 4px solid #ffffff;
+  border: 12px solid #ffffff; /* Use border instead of padding to clip child image scales cleanly */
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   transition: var(--transition-normal);
-}
-
-.success-card:hover {
-  transform: scale(1.03) rotate(1deg);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--primary-color);
-}
-
-.success-img-wrapper {
-  height: 250px;
+  z-index: 1;
   overflow: hidden;
 }
 
-.success-img-wrapper img {
+.story-img-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-slow);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
 }
 
-.success-card:hover .success-img-wrapper img {
-  transform: scale(1.06);
+/* Polaroids / Tilts */
+.story-polaroid-left {
+  transform: rotate(-4deg);
 }
 
-.success-card-caption {
-  padding: 16px;
-  text-align: center;
+.story-polaroid-right {
+  transform: rotate(4deg);
 }
 
-.success-card-title {
-  font-size: 16px;
+.story-img-card.story-polaroid-left img {
+  transform: scale(1.15); /* Zoom in Luna image to fit polaroid frame */
+}
+
+/* Circular card for Story 3 */
+.story-img-card.story-circle {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  border: 12px solid #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transform: none; /* No rotation */
+  overflow: hidden;
+}
+
+.story-img-card.story-circle img {
+  border-radius: 50%;
+  transform: scale(1.25); /* Zoom in Mateo image to fit circle frame */
+}
+
+/* Arch card for Story 4 */
+.story-img-card.story-arch {
+  border-radius: 145px 145px 28px 28px;
+  border: 12px solid #ffffff;
+  transform: rotate(4deg);
+  overflow: hidden;
+}
+
+.story-img-card.story-arch img {
+  border-radius: 135px 135px 16px 16px;
+  transform: scale(1.15); /* Zoom in Perla image to fit arch frame */
+}
+
+.story-img-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  z-index: 5;
+}
+
+.story-img-card.story-polaroid-left:hover {
+  transform: translateY(-8px) scale(1.02) rotate(-2deg);
+}
+
+.story-img-card.story-polaroid-right:hover {
+  transform: translateY(-8px) scale(1.02) rotate(2deg);
+}
+
+.story-img-card.story-arch:hover {
+  transform: translateY(-8px) scale(1.02) rotate(2deg);
+}
+
+/* Text card styling */
+.story-text-card {
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border: none;
+  max-width: 520px;
+  width: 100%;
+  z-index: 2;
+  transition: var(--transition-normal);
+}
+
+.story-item:hover .story-text-card {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Right-aligned text card support */
+.story-text-right {
+  text-align: right;
+}
+
+.story-text-right .story-badge-row {
+  justify-content: flex-end;
+}
+
+.story-text-right .story-desc {
+  text-align: right;
+}
+
+/* Inside Text Card */
+.story-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.story-pet-name {
+  font-family: var(--font-headings);
+  font-size: 18px;
   font-weight: 700;
   color: var(--dark-text);
-  margin-bottom: 4px;
 }
 
-.success-card-tag {
-  font-size: 13px;
+.story-pet-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.badge-blue {
+  background-color: var(--secondary-light);
+  color: var(--secondary-color);
+}
+
+.badge-green {
+  background-color: var(--primary-light);
   color: var(--primary-color);
-  font-weight: 600;
+}
+
+.story-family-title {
+  font-family: var(--font-headings);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+
+.story-desc {
+  font-size: 14px;
+  color: var(--medium-text);
+  line-height: 1.6;
+}
+
+/* Floating decorations */
+.story-decor-heart {
+  position: absolute;
+  left: -80px;
+  top: 80px;
+  width: 90px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.story-decor-paw-right {
+  position: absolute;
+  right: -80px;
+  top: 100px;
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.story-decor-paw-left {
+  position: absolute;
+  left: -80px;
+  top: 100px;
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* SECTION 7: CONTACT / INTEREST FORM */
@@ -1394,7 +1643,7 @@ textarea.form-input {
 }
 
 .footer-logo {
-  height: 75px;
+  height: 130px; /* Increased from 75px to make the logo larger */
   width: auto;
   object-fit: contain;
   align-self: flex-start;
@@ -1565,7 +1814,7 @@ textarea.form-input {
     font-size: 64px;
   }
   .hero-img {
-    height: 400px;
+    height: auto;
   }
   .carousel-slide {
     flex: 0 0 50%;
@@ -1581,8 +1830,30 @@ textarea.form-input {
   .donors-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .success-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .story-item {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .story-img-card, .story-img-card.story-circle, .story-img-card.story-arch {
+    transform: none !important;
+    margin: 0 !important;
+  }
+  .story-text-card {
+    margin: 0 !important;
+    max-width: 100%;
+  }
+  .story-badge-row, .story-text-right .story-badge-row {
+    justify-content: center;
+  }
+  .story-text-right {
+    text-align: center;
+  }
+  .story-text-right .story-desc {
+    text-align: center;
+  }
+  .story-decor-heart, .story-decor-paw-right, .story-decor-paw-left {
+    display: none;
   }
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -1619,7 +1890,7 @@ textarea.form-input {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
-    text-align: center;
+    text-align: left; /* Left-aligned on mobile */
   }
 
   .hero-title-prefix {
@@ -1631,12 +1902,12 @@ textarea.form-input {
   }
 
   .hero-description {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0; /* Left-aligned on mobile */
   }
 
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start; /* Left-aligned on mobile */
   }
 
   .carousel-slide {
@@ -1701,10 +1972,6 @@ textarea.form-input {
   .pillars-grid {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .success-grid {
-    grid-template-columns: 1fr;
   }
 
   .contact-card {

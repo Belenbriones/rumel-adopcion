@@ -43,11 +43,30 @@
 
     <!-- 1. HERO SECTION (Conoce a Oliver) -->
     <section class="hero-section" id="hero">
+        <!-- Floating decorations on top of the background image -->
+        <img src="corazones.svg" alt="Decoración Corazón" class="hero-bg-heart">
+        <img src="garritas.svg" alt="Decoración Patita" class="hero-bg-paw">
+
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="hero-sparkle"><i class="fa-solid fa-sparkles"></i></div>
+                <div class="hero-sparkle">
+                    <svg class="hero-decor-sparkle" width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 14L8 6" stroke="#3FAC90" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M14 10V2" stroke="#3FAC90" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M24 14L20 6" stroke="#3FAC90" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h1 class="hero-title-prefix">Conoce a</h1>
-                <div class="hero-title-main">Oliver</div>
+                <div class="hero-title-main">
+                    Oliver
+                    <div class="hero-heart-wrapper">
+                        <img src="corazones.svg" alt="Corazón" class="hero-heart-decor">
+                        <svg class="hero-heart-sparkles" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 14L8 6" stroke="#3FAC90" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M14 12L18 4" stroke="#3FAC90" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
 
                 <div>
                     <span class="hero-badge">
@@ -70,11 +89,9 @@
                 </div>
             </div>
 
-            <div class="hero-image-container">
-                <!-- Background shape (Rectangle 330.png) -->
-                <img src="Rectangle 330.png" alt="Decoración de Fondo" class="hero-bg-shape" id="hero-bg-shape">
-                <!-- Dog image (perrito.del.inicio.png) -->
-                <img src="perrito.del.inicio.png" alt="Oliver el Perrito" class="hero-img" id="hero-img-oliver">
+            <!-- Mobile-only image container (hidden on desktop, flows below text on mobile) -->
+            <div class="hero-image-mobile-only">
+                <img src="Group 146 (1).svg" alt="Oliver el Perrito">
             </div>
         </div>
     </section>
@@ -657,7 +674,7 @@
                     <div class="timeline-img-side">
                         <div class="timeline-img-card">
                             <div class="node-number node-top-left">1</div>
-                            <img src="lit1.png" alt="Explora mascotas compatibles">
+                            <img src="lit1.png" alt="Explora mascotas compatibles" class="timeline-main-img">
                             <img src="Vector 240.svg" alt="Flechita decorativa" class="step-arrow arrow-1">
                         </div>
                     </div>
@@ -675,7 +692,7 @@
                     <div class="timeline-img-side">
                         <div class="timeline-img-card">
                             <div class="node-number node-top-right">2</div>
-                            <img src="lit2.png" alt="Cuéntanos sobre ti">
+                            <img src="lit2.png" alt="Cuéntanos sobre ti" class="timeline-main-img">
                             <img src="Vector 239.svg" alt="Flechita decorativa" class="step-arrow arrow-2">
                         </div>
                     </div>
@@ -693,7 +710,7 @@
                     <div class="timeline-img-side">
                         <div class="timeline-img-card">
                             <div class="node-number node-top-left">3</div>
-                            <img src="lit3.png" alt="Conexión con fundación">
+                            <img src="lit3.png" alt="Conexión con fundación" class="timeline-main-img">
                             <img src="Vector 83.svg" alt="Flechita decorativa" class="step-arrow arrow-3">
                         </div>
                     </div>
@@ -711,7 +728,7 @@
                     <div class="timeline-img-side">
                         <div class="timeline-img-card">
                             <div class="node-number node-top-right">4</div>
-                            <img src="lit4.png" alt="Conoce a tu mascota">
+                            <img src="lit4.png" alt="Conoce a tu mascota" class="timeline-main-img">
                             <img src="Vector 206.svg" alt="Flechita decorativa" class="step-arrow arrow-4">
                         </div>
                     </div>
@@ -729,7 +746,7 @@
                     <div class="timeline-img-side">
                         <div class="timeline-img-card">
                             <div class="node-number node-top-left">5</div>
-                            <img src="lit5.png" alt="Comienza una nueva historia">
+                            <img src="lit5.png" alt="Comienza una nueva historia" class="timeline-main-img">
                         </div>
                     </div>
                     <div class="timeline-content-side">
@@ -749,6 +766,12 @@
     <section class="donors-banner-section" id="donaciones">
         <div class="donors-banner-container">
             <img src="gatito.patita.png" alt="Gatito Patita" class="donors-banner-kitten">
+            <!-- Sparkles decorativos del gatito -->
+            <svg class="donors-banner-sparkles" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 28L6 14" stroke="#3FAC90" stroke-width="4" stroke-linecap="round"/>
+                <path d="M22 22L30 8" stroke="#3FAC90" stroke-width="4" stroke-linecap="round"/>
+                <path d="M26 32L40 32" stroke="#3FAC90" stroke-width="4" stroke-linecap="round"/>
+            </svg>
             <div class="donors-banner-content">
                 <h2 class="donors-banner-title">Sé parte de nuestros donadores</h2>
                 <div class="donors-banner-buttons">
@@ -822,56 +845,83 @@
     <section class="success-section" id="testimonios">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Finales felices y nuevas vidas</h2>
+                <span class="stories-badge">Historias Reales</span>
+                <h1 class="section-title">Historias que nos llenan el alma</h1>
                 <p class="section-subtitle">
-                    Gracias al amor de personas comprometidas, estas mascotas hoy disfrutan de un hogar cálido. Te
-                    compartimos algunas de nuestras adopciones más recientes.
+                    Una adopción puede cambiar dos vidas. Conoce el antes y el después de nuestros valientes protagonistas.
                 </p>
             </div>
 
-            <div class="success-grid">
+            <div class="stories-list">
 
-                <!-- Adopción 1 -->
-                <div class="success-card">
-                    <div class="success-img-wrapper">
-                        <img src="Adopción 1.png" alt="Adopción Exitosa 1">
+                <!-- Story 1 -->
+                <div class="story-item story-left-img">
+                    <img src="corazones.svg" alt="Decoración corazón" class="story-decor-heart">
+                    <div class="story-img-card story-polaroid-left">
+                        <img src="adopción(1).svg" alt="Luna y su familia">
                     </div>
-                    <div class="success-card-caption">
-                        <h4 class="success-card-title">Max y su Familia</h4>
-                        <span class="success-card-tag">Adoptado hace 2 meses</span>
+                    <div class="story-text-card">
+                        <div class="story-badge-row">
+                            <span class="story-pet-name">Luna</span>
+                            <span class="story-pet-badge badge-blue">Cachorro • Labradoodle • Juguetona</span>
+                        </div>
+                        <h3 class="story-family-title">Familia: Los García-López</h3>
+                        <p class="story-desc">
+                            Una pareja joven que buscaba su primer "hijo" perruno. Luna los eligió a ellos en el refugio saltando directo a los brazos de Carlos. Hoy, es la reina de su apartamento y experta en robar calcetines.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Adopción 2 -->
-                <div class="success-card">
-                    <div class="success-img-wrapper">
-                        <img src="Adopción 2.png" alt="Adopción Exitosa 2">
+                <!-- Story 2 -->
+                <div class="story-item story-right-img">
+                    <div class="story-text-card story-text-right">
+                        <div class="story-badge-row">
+                            <span class="story-pet-badge badge-green">Senior • Gato Común • Muy Tranquilo</span>
+                            <span class="story-pet-name">Bigotes</span>
+                        </div>
+                        <h3 class="story-family-title">Familia: Doña Elena</h3>
+                        <p class="story-desc">
+                            Elena vive sola y buscaba una compañía calmada. Bigotes, tras años esperando, encontró en su regazo el calor que necesitaba. Son compañeros inseparables de lectura cada tarde frente a la ventana.
+                        </p>
                     </div>
-                    <div class="success-card-caption">
-                        <h4 class="success-card-title">Luna en su Hogar</h4>
-                        <span class="success-card-tag">Adoptada hace 6 meses</span>
-                    </div>
-                </div>
-
-                <!-- Adopción 3 -->
-                <div class="success-card">
-                    <div class="success-img-wrapper">
-                        <img src="Adopción 3.png" alt="Adopción Exitosa 3">
-                    </div>
-                    <div class="success-card-caption">
-                        <h4 class="success-card-title">Mila y Tomás</h4>
-                        <span class="success-card-tag">Adoptados juntos</span>
+                    <div class="story-img-card story-polaroid-right">
+                        <img src="Adopción(3).svg" alt="Dante y Doña Elena">
                     </div>
                 </div>
 
-                <!-- Adopción 4 -->
-                <div class="success-card">
-                    <div class="success-img-wrapper">
-                        <img src="Adopción 4.png" alt="Adopción Exitosa 4">
+                <!-- Story 3 -->
+                <div class="story-item story-left-img">
+                    <div class="story-img-card story-circle">
+                        <img src="adopción(2).svg" alt="Mateo y su familia">
                     </div>
-                    <div class="success-card-caption">
-                        <h4 class="success-card-title">El Regreso de Mateo</h4>
-                        <span class="success-card-tag">Adoptado hace 1 año</span>
+                    <div class="story-text-card">
+                        <div class="story-badge-row">
+                            <span class="story-pet-name">Mateo</span>
+                            <span class="story-pet-badge badge-blue">Adulto • Golden Retriever • Protector</span>
+                        </div>
+                        <h3 class="story-family-title">Familia: Los Morales</h3>
+                        <p class="story-desc">
+                            Mateo fue adoptado por una familia con tres niños pequeños. <em>Su paciencia infinita y su amor protector lo convirtieron en el cuarto hermano.</em> No hay juego en el jardín donde Mateo no sea el protagonista.
+                        </p>
+                    </div>
+                    <img src="garritas.svg" alt="Decoración patita" class="story-decor-paw-right">
+                </div>
+
+                <!-- Story 4 -->
+                <div class="story-item story-right-img">
+                    <img src="garritas.svg" alt="Decoración patita" class="story-decor-paw-left">
+                    <div class="story-text-card">
+                        <div class="story-badge-row">
+                            <span class="story-pet-name">Perla</span>
+                            <span class="story-pet-badge badge-green">Joven • Cariñosa • Muy Activa</span>
+                        </div>
+                        <h3 class="story-family-title">Familia: Sofía y su gata Mia</h3>
+                        <p class="story-desc">
+                            Sofía buscaba una hermana para su gata Mia. La compatibilidad fue instantánea. Ahora recorren juntas los senderos de montaña cada fin de semana, formando una manada inseparable llena de energía.
+                        </p>
+                    </div>
+                    <div class="story-img-card story-arch">
+                        <img src="adopción(4).svg" alt="Mía y Sofía">
                     </div>
                 </div>
 
