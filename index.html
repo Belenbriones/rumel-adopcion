@@ -8,6 +8,9 @@
     <meta name="description"
         content="Encuentra a tu compañero ideal en Rumel. Conoce las historias de Oliver, Thor, Mía y muchas más mascotas esperando un hogar definitivo. Proceso de adopción transparente y responsable.">
 
+    <!-- Favicon de la pestaña -->
+    <link rel="icon" type="image/png" href="R-logo.png">
+
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -21,7 +24,7 @@
     <header class="header" id="header">
         <div class="container nav-container">
             <a href="#" class="logo" id="logo-link">
-                <img src="Rumel.png" alt="Rumel Logo">
+                <img src="Rumel-logo.sinfondo.png" alt="Rumel Logo">
             </a>
 
             <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
@@ -31,18 +34,17 @@
             </button>
 
             <nav class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-item active" id="nav-inicio">Inicio</a>
-                <a href="#proceso" class="nav-item" id="nav-proceso">Proceso</a>
                 <a href="#adopta" class="nav-item" id="nav-adopta">Adopta</a>
-                <a href="#testimonios" class="nav-item" id="nav-testimonios">Testimonios</a>
-                <a href="#donaciones" class="nav-item" id="nav-donaciones">Donaciones</a>
+                <a href="#proceso" class="nav-item" id="nav-proceso">Proceso</a>
+                <a href="#donaciones" class="nav-item" id="nav-donaciones">Donación</a>
+                <a href="#testimonios" class="nav-item" id="nav-testimonios">Testimonio</a>
                 <a href="#contacto" class="nav-item" id="nav-contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
     <!-- 1. HERO SECTION (Conoce a Oliver) -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section" id="hero" onclick="toggleHeroImage(event)">
         <!-- Floating decorations on top of the background image -->
         <img src="corazones.svg" alt="Decoración Corazón" class="hero-bg-heart">
         <img src="garritas.svg" alt="Decoración Patita" class="hero-bg-paw">
@@ -50,11 +52,11 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="hero-sparkle">
-                    <svg class="hero-decor-sparkle" width="28" height="24" viewBox="0 0 28 24" fill="none"
+                    <svg class="hero-decor-sparkle" width="36" height="36" viewBox="0 0 36 36" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 14L8 6" stroke="#3FAC90" stroke-width="3" stroke-linecap="round" />
-                        <path d="M14 10V2" stroke="#3FAC90" stroke-width="3" stroke-linecap="round" />
-                        <path d="M24 14L20 6" stroke="#3FAC90" stroke-width="3" stroke-linecap="round" />
+                        <path d="M12 28L4 20" stroke="#3FAC90" stroke-width="4" stroke-linecap="round" />
+                        <path d="M20 22L14 10" stroke="#3FAC90" stroke-width="4" stroke-linecap="round" />
+                        <path d="M29 18L27 4" stroke="#3FAC90" stroke-width="4" stroke-linecap="round" />
                     </svg>
                 </div>
                 <h1 class="hero-title-prefix">Conoce a</h1>
@@ -93,7 +95,8 @@
 
             <!-- Mobile-only image container (hidden on desktop, flows below text on mobile) -->
             <div class="hero-image-mobile-only">
-                <img src="Group 146 (1).svg" alt="Oliver el Perrito">
+                <img src="Group 146 (1).svg" alt="Oliver el Perrito" class="mobile-img-base">
+                <img src="Group 145.png" alt="Oliver el Perrito 2" class="mobile-img-overlay">
             </div>
         </div>
     </section>
@@ -102,7 +105,7 @@
     <section class="gallery-section" id="adopta">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Conoce a quienes están esperando una oportunidad</h2>
+                <h2 class="section-title">Conoce a quiénes están esperando una oportunidad</h2>
                 <p class="section-subtitle">
                     Cada una de estas mascotas espera algo más que un lugar donde vivir. Busca una familia que la haga
                     sentir segura, querida y parte de ella para siempre.
@@ -126,7 +129,7 @@
                             <div class="pet-card" id="card-mia">
                                 <div class="pet-img-wrapper">
                                     <img src="gatito.tomas.png" alt="Gatita Mía" class="pet-card-img">
-                                    <span class="pet-card-tag">Mia</span>
+                                    <span class="pet-card-tag">Mía</span>
                                 </div>
                                 <div class="pet-card-info">
                                     <div class="pet-card-meta">
@@ -164,7 +167,7 @@
                             <div class="pet-card" id="card-tomas">
                                 <div class="pet-img-wrapper">
                                     <img src="gatito.tomas.svg" alt="Gatito Tomás" class="pet-card-img">
-                                    <span class="pet-card-tag">Tomas</span>
+                                    <span class="pet-card-tag">Tomás</span>
                                 </div>
                                 <div class="pet-card-info">
                                     <div class="pet-card-meta">
@@ -354,7 +357,7 @@
                         <!-- Maña -->
                         <div class="mana-box">
                             <span class="mana-badge">SU MAÑA</span>
-                            <span>Te trae sus juguetes aunque no se los pidas. Todos. A la vez.</span>
+                            <span>Te trae sus juguetes aunque no se los pidas todos a la vez.</span>
                         </div>
 
                         <!-- Action Buttons -->
@@ -412,7 +415,7 @@
 
                         <div class="profile-desc-box">
                             Thor es un perro valiente, de gran corazón y sumamente leal que fue rescatado de una
-                            situación de calle. Necesita una familia activa con quien gastar su energía y correr feliz.
+                            situación de calle. Necesita una familia activa con quién gastar su energía y correr feliz.
                         </div>
 
                         <!-- Specs Grid -->
@@ -632,7 +635,7 @@
                         <!-- Maña -->
                         <div class="mana-box">
                             <span class="mana-badge">SU MAÑA</span>
-                            <span>Si no le haces caso, tira tus lápices del escritorio con su patita. uno por
+                            <span>Si no le haces caso, tira tus lápices del escritorio con su patita, uno por
                                 uno.</span>
                         </div>
 
@@ -1005,7 +1008,7 @@
             <div class="footer-top">
 
                 <div class="footer-brand">
-                    <img src="logo.blanco1.svg" alt="Rumel Logo Blanco" class="footer-logo">
+                    <img src="logo-Rumel-Blanco.png" alt="Rumel Logo Blanco" class="footer-logo">
                     <p class="footer-desc">
                     </p>
                     <div class="footer-socials"
@@ -1296,6 +1299,18 @@
             document.getElementById('form-interest').value = interestVal;
             document.getElementById('form-message').value = messageText;
             showToast(`Formulario configurado para: ${interestVal === 'adopcion' ? 'Adopción' : 'Donación'}`);
+        }
+
+        // Toggle hero image on click
+        function toggleHeroImage(event) {
+            // No cambiar si se hace clic en el texto o botones o encabezado
+            if (event.target.closest('.hero-content') || event.target.closest('.header')) {
+                return;
+            }
+
+            // Alternar clase en la sección, las transiciones de CSS harán el fundido cruzado
+            const heroSection = document.getElementById('hero');
+            heroSection.classList.toggle('alt-hero-image');
         }
 
         // Toast Notification utility
